@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио — Даниил</title>
+  <style>
+    :root {
+      --bg: #f9fafc;
+      --fg: #1a1a1a;
+      --accent: #3b82f6;
+      --card: #ffffff;
+      --shadow: 0 8px 24px rgba(0,0,0,0.08);
+      --muted: #6b7280;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: var(--accent);
+    }
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: var(--fg);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+    section {
+      max-width: 960px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+      margin-top: 0.4rem;
+      border-radius: 2px;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+    }
+    .skills, .projects {
+      display: grid;
+      gap: 1rem;
+    }
+    .skills {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .skill {
+      background: var(--accent);
+      color: #fff;
+      padding: 0.8rem;
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .skill:hover {
+      background: #2563eb;
+    }
+    .project h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Даниил — разработчик</h1>
+    <nav>
+      <a href="#about">Обо мне</a>
+      <a href="#skills">Навыки</a>
+      <a href="#projects">Проекты</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Обо мне</h2>
+    <div class="card">
+      <p>Я — разработчик, увлечённый созданием надёжных и современных решений. Люблю минимализм в коде и дизайне, оптимизацию и ясную архитектуру. Работаю с C++, Go, Python и современными веб‑технологиями.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Навыки</h2>
+    <div class="skills">
+      <div class="skill">C++ / C</div>
+      <div class="skill">Go</div>
+      <div class="skill">Python</div>
+      <div class="skill">Docker / Kubernetes</div>
+      <div class="skill">PostgreSQL / Redis</div>
+      <div class="skill">Git / CI/CD</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="projects">
+      <div class="card project">
+        <h3>Highload Cache</h3>
+        <p>Высокопроизводительный кэш на C++20 с lock‑free структурами и метриками Prometheus.</p>
+        <a class="btn" href="https://github.com/username/highload-cache" target="_blank">GitHub</a>
+      </div>
+      <div class="card project">
+        <h3>Net Probe</h3>
+        <p>Инструмент наблюдаемости сетевого стека на Go с eBPF‑хуками и визуализацией метрик.</p>
+        <a class="btn" href="https://github.com/username/net-probe" target="_blank">GitHub</a>
+      </div>
+      <div class="card project">
+        <h3>NumLib</h3>
+        <p>Библиотека численных методов на C с SIMD‑оптимизацией и совместимостью с BLAS.</p>
+        <a class="btn" href="https://github.com/username/numlib" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <div class="card">
+      <p><strong>Email:</strong> <a href="mailto:d.zhurnevich@example.com">d.zhurnevich@example.com</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></p>
+      <p><strong>Telegram:</strong> <a href="https://t.me/username" target="_blank">@username</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Даниил — все права защищены
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
